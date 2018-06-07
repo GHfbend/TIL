@@ -32,6 +32,9 @@ $ rake db:migrate
 
 ### memos_controller.rb
 ~~~
+before_action :is_owner?, only: [:edit, :update, :destroy]
+~~~
+~~~
 # before_action 하단에
 
 load_and_authorize_resource
