@@ -1,7 +1,10 @@
 # Pagination 기능
 
 게시글이 많을 경우 page를 여러 개로 나눌 수 있는 기능
+- Gem 'will_paginate'
+- Gem 'kaminari'
 
+## Gem 'will_paginate'
 ### seed.rb
 많은 데이터를 직접 생성하기 보다는 seed파일을 이용해 data를 생성
 ~~~
