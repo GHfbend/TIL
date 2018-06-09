@@ -36,6 +36,12 @@ $ rake db:migrate
 ~~~
 
 ## Local에 업로드
+### bash
+로컬 업로더 생성
+~~~
+$ rails g uploader local_file
+~~~
+
 ### new.html.erb
 파일 입력폼
 ~~~
@@ -57,14 +63,4 @@ end
 업로드된 파일 출력
 ~~~
 File: <%= image_tag x.local_file %>
-~~~
-
-### bash
-로컬 업로더 생성
-~~~
-$ rails g uploader 
-~~~
-
-### /db/
-### /app/models/post.rb
 ~~~
