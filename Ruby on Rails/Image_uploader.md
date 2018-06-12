@@ -2,7 +2,7 @@
 
 scaffold를 생성한 이후의 환경에서 진행한다.
 
-- Local에 업로드
+- Local에 업로드 (uploaded)
 - DB에 업로드
 - S3에 업로드 (Amazon-s3)
 
