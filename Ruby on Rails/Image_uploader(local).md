@@ -2,17 +2,12 @@
 
 scaffold를 생성한 이후의 환경에서 진행한다.
 
-- Local에 업로드 (uploaded)
-- DB에 업로드
-- S3에 업로드 (Amazon-s3)
+- Local에 업로드
 
 ## 기본
 ### Gemfile
 ~~~
 gem 'carrierwave'
-
-# aws 사용을 위해 필요
-gem 'fog-aws'
 
 # 섬네일
 gem 'mini_magick'
@@ -23,7 +18,7 @@ gem 'mini_magick'
 $ bundle (install)
 ~~~
 
-### /db/migrate/number_create_posts.rb
+### /db/migrate/xxxxxxxxxx_create_posts.rb
 ~~~
 t.string :local_file
 t.binary :db_file
