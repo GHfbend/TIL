@@ -4,12 +4,32 @@ scaffold를 생성한 이후의 환경에서 진행한다.
 
 - Local에 업로드
 
-## 기본
+## scaffold 구성
+### bash
+~~~
+$ rails generate scaffold Post title:string content:text
+~~~
+
+### route.rb
+~~~
+Rails.application.routes.draw do
+  root :to => 'post#index'
+  resources :posts
+end
+~~~
+
+### bash
+~~~
+$ rake db:migrate
+~~~
+
+## carrierwave, mini_magick 설치
+
 ### Gemfile
 ~~~
 gem 'carrierwave'
 
-# 섬네일
+# 이미지를 만들고, 수정하고, 지우는 작업들을 도와주는 gem
 gem 'mini_magick'
 ~~~
 
@@ -21,8 +41,6 @@ $ bundle (install)
 ### /db/migrate/xxxxxxxxxx_create_posts.rb
 ~~~
 t.string :local_file
-t.binary :db_file
-t.string :s3_file
 ~~~
 
 ### bash
