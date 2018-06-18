@@ -105,7 +105,6 @@ Accept 관련 헤더는 서버에게 클라이언트 쪽의 선호와 능력을 
  - Proxy-Authorization: Authorization과 같으나, 프락시에서 인증할 때 사용
  - Proxy-Connection: Connection과 같으나, 프락시에서 연결을 맺을 때 사용
 
-
 ## Body
 
  - 실제 data의 본문
