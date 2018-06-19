@@ -105,6 +105,51 @@ Accept 관련 헤더는 서버에게 클라이언트 쪽의 선호와 능력을 
  - Proxy-Authorization: Authorization과 같으나, 프락시에서 인증할 때 사용
  - Proxy-Connection: Connection과 같으나, 프락시에서 연결을 맺을 때 사용
 
+#### Response Header
+서버가 클라이언트에게 정보를 제공하기 위함(서버의 종류 등등)  
+ex. Server : Tiki-Hut/1.0 - Tiki-Hut 서버 1.0 버전으로부터 응답을 받았다.  
+
+ - Age: 응답이 얼마나 오래되었는가
+ - Public: 특정 리소스에 대해 지원하는 요청 메서드의 목록
+ - Retry-After: 리소스가 사용 불가능일 때, 언제부터 가능한지를 제공
+ - Server: 서버 애플리케이션의 이름과 버전
+ - Title: HTML문서에서 주어진 것과 같은 제목
+ - Warning: 사유 구절에 있는 것보다 더 자세한 경고 메세지  
+
+서버에 여러 언어로 번역된 HTML 문서가 있다면, HTTP는 서버와 클라이언트가 어떤 표현을 택할 것인지 협상을 지원하는데, 협상 가능한 리소스에 대한 정보를 운반하는 몇 가지 헤더들이 있다.  
+
+ - Accept-Ranges: 서버가 자원에 대해 받아들일 수 있는 범위의 형태
+ - Vary: 서버가 확인해보아야 하고, 그래서 응답에 영향을 줄 수 있는 헤더들의 목록  
+
+###### 응답 보안 헤더
+ - Proxy-Authenticate: 프락시에서 클라이언트로 보낸 인증요구 목록
+ - Set-Cookie: 서버가 클라이언트를 인증할 수 있도록 클라이언트 측에 토큰을 설정하기 위해 사용
+ - Set-Cookie2
+ - WWW-Authenticate: 서버가 클라이언트로 보낸 인증요구 목록
+
+#### Entity Header (엔티티 헤더)
+엔티티 본문에 대한 헤더를 말한다. 이 헤더는 엔티티의 데이터 타입이 무엇인지 등을 알려줄 수 있다.  
+ex. Content-Type : text/html; charset=utf-8 - 애플리케이션에게 데이터가 utf-8 포맷의 HTML 문서임을 알려준다.  
+
+ - Content-Base: 바디에서 사용된 URL의 Base URL
+ - Content-Encoding: 바디의 인코딩 타입
+ - Content-Language: 바디에 적절한 자연어
+ - Content-Length: 바디의 사이즈
+ - Content-Location: 리소스가 실제 어디에 위치하는가
+ - Content-MD5: 바디의 MD5 checksum
+ - Content-Range: 전체 리소스에서 이 엔티티가 해당하는 범위를 byte 단위로 표현
+ - Content-Type: 바디가 어떤 종류의 객체인가
+
+###### 엔티티 캐싱헤더
+일반 캐싱 헤더는 언제 어떻게 캐싱되어야 하는지에 대한 지시자를 제공하고, 엔티티 캐싱헤더는 엔티티 캐싱헤더는 엔티티 캐싱에 대한 정보를 제공(캐시된 사본이 유효한가?, 캐시된 리소스가 언제 expire 되는가 등등)
+
+ - ETage: 이 엔티티에 대한 엔티티 태그
+ - Expires: 이 엔티티가 더 이상 유효하지 않아서 원본을 다시 받아와야 하는 시간
+ - Last-Modified: 가장 최근에 이 엔티티가 변경된 시간
+
+#### Extension Header (확장 헤더)
+애플리케이션 개발자들이 임의로 만드는 비표ㅛ준 헤더들
+
 ## Body
 
  - 실제 data의 본문
