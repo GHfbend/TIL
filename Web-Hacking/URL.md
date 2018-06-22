@@ -17,11 +17,11 @@ Ex. http://www.joes-hardware.com/seasonal/index-fall.html
 
  - 스킴: 사용할 프로토콜
  - 호스트와 포트: 리소스를 가지고 있는 인터넷상의 호스트 명 또는 IP와 서버가 열어놓은 네트워크 포트 (HTTP = 80)
- - 사용자명과 비밀번호: 대부분의 서버가 자신이 가지고 있는 데이터에 접근을 허용하기 위해 사용자명과 비밀번호를 요구한다.
-        ex. ftp://joe:my_pass@ftp.prep.ai.it.edu/pub/gnu
+ - 사용자명과 비밀번호: 대부분의 서버가 자신이 가지고 있는 데이터에 접근을 허용하기 위해 사용자명과 비밀번호를 요구한다.  
+        ex. ftp://joe:my_pass@ftp.prep.ai.it.edu/pub/gnu  
  - 경로: 리소스가 존재하는 서버상의 위치
- - 파라미터: 많은 스킴들은 위의 정보만으로 리소스를 찾지 못하는 경우가 있다. URL을 사용하는 애플리케이션이 리소스에 접근하기 위해 파라미터가 필요하다.
-        ex. http://www.asdf.com/hammers;sale=false/index.html;graphics=true
- - 질의문자열(쿼리): 데이터베이스 같은 서비스들이 요청받은 리소스 형식의 범위를 좁히기 위해 질의문을 받을 수 있다.
-        ex. http://www.asdf.com/item?id=1&avaliable=true
+ - 파라미터: 많은 스킴들은 위의 정보만으로 리소스를 찾지 못하는 경우가 있다. URL을 사용하는 애플리케이션이 리소스에 접근하기 위해 파라미터가 필요하다.  
+        ex. http://www.asdf.com/hammers;sale=false/index.html;graphics=true  
+ - 질의문자열(쿼리): 데이터베이스 같은 서비스들이 요청받은 리소스 형식의 범위를 좁히기 위해 질의문을 받을 수 있다.  
+        ex. http://www.asdf.com/item?id=1&avaliable=true  
  - 프래그먼트: HTML같은 리소스 형식은 원래 수준보다 더 작게 나뉘어지고, 이를 구분하기 위해 프래그먼트 값을 준다.
