@@ -2,10 +2,10 @@
 
 ### PHP 모드 설정
 
- 1. <? echo("가장 간단한 방법입니다.\n"); ?>
- 2. <?php echo("XML을 같이 사용한다면 이렇게\n"); ?>
+ 1. <? echo("가장 간단한 방법입니다."); ?>
+ 2. <?php echo("XML을 같이 사용한다면 이렇게"); ?>
  3. <script language="php">
-      echo("일부 에디터에서는 적용 안됨\n");
+      echo("일부 에디터에서는 적용 안됨");
     </script>
  4. <% echo("ASP style"); %>
     <%= $variable; # 다음과 같습니다. <% echo .." %>
